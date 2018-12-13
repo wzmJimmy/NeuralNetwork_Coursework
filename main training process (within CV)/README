@@ -1,0 +1,13 @@
+The Command lines in Euler is:
+
+sbatch -d singleton slurm0.sh
+sbatch -d singleton slurm.sh
+sbatch -d singleton slurm1.sh
+sbatch -d singleton slurm.sh
+sbatch -d singleton slurm.sh
+sbatch -d singleton slurm.sh
+sbatch -d singleton slurm.sh
+
+In the slurm0.h, I initialize a trainer with X-entropy loss function related to trainer1.py. Then with slurs.h, the trainer starts working for specific epochs.
+
+In the slurm0.h, I initialize a trainer with Lovász loss function related to trainer2.py. Then I start the trainer with slurm.sh three times. Since Lovász function trains slowly, I separate the training into three turns each turn has 100 epoch. 
